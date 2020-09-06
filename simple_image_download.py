@@ -123,7 +123,8 @@ class simple_image_download:
                         if file_extension == '.png' and not google_image_seen:
                             google_image_seen = True
                             raise ValueError()
-                        file_name = str(keyword_to_search[i]) + "_" + str(j + 1) + file_extension
+                        #file_name = str(keyword_to_search[i]) + "_" + str(j + 1) + file_extension
+                        file_name = str(j + 1) + file_extension
                         with open(os.path.join(path, file_name), 'wb') as file:
                             file.write(r.content)
                         bar.update(bar.currval + 1)
